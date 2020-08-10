@@ -1,0 +1,15 @@
+
+.card {
+  line-height: inherit;
+}
+.card__header {
+  padding-top: $space-3;
+  padding-bottom: $space-4;
+}
+.card__title {
+  margin-bottom: $space-2;
+}
+.card__footer {
+  margin-bottom: $space-2;
+  margin-top: $space-2;
+}

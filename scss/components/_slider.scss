@@ -1,0 +1,41 @@
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+span[class*='slider__btn']{
+  font-size: 2.4em;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translate(0,-50%);
+  box-shadow: 0px 0px 5px 1px rgba(80, 77, 77, 0.39);
+  cursor: pointer;
+}
+.slider__btnLeft {
+  position: absolute;
+  left: 5px;
+  z-index: $zIndexNext;
+}
+.slider__btnRight {
+  z-index: $zIndexNext;
+  position: absolute;
+  right: 5px;
+}
+.slider__scroll {
+  overflow-x: auto;
+  margin-bottom: -20px;
+  scroll-behavior: smooth;
+}
+
+.slider__galeria {
+  display: flex;
+  flex-direction:  row;
+  flex-wrap: nowrap;
+  padding: 0 10px 0;
+  height: calc(100% - 40px);
+}

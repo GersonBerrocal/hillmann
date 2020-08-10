@@ -1,0 +1,152 @@
+/*inicia el home*/
+// gneral para home
+.pg-section-title {
+  font-size: 1.6rem;
+  letter-spacing: .2em;
+  z-index: $zIndexNext;
+  position: relative;
+}
+
+body {
+  background-color: var(--white);
+}
+
+header {
+  color: var(--white);
+}
+
+.pg-header-one {
+  margin-bottom: $space-5 * 6;
+}
+
+// seccion 2 de la pagina
+
+.pg-section-date {
+  position: relative;
+  padding-bottom: 130%;
+}
+.pg-section-data__title {
+  position: absolute;
+  top: $space-4;
+  left: $space-3;
+  z-index: $zIndexNext;
+}
+.pg-image-overlowed {
+  width: 60%;
+  float: right;
+  position: relative;
+  top: $space-3 * -1;
+}
+.pg-image-overlowed__frame:nth-last-child(2) {
+  position: absolute;
+  top:60%;
+  left: -56%;
+  z-index: $zIndexNormal;
+  filter: grayscale(1) brightness(180%) contrast(80%);
+}
+p.pg-image-overlowed__frame {
+  position: absolute;
+  top: 100%;
+  right: $space-4;
+  z-index: $zIndexNext;
+  background-color: var(--white);
+  width: 126%;
+}
+
+// section de designed
+
+.pg-sdisegned .pg-image-overlowed {
+  z-index: $zIndexNormal;
+}
+.pg-sdisegned h2 span {
+  color: var(--gold);
+}
+.pg-sdisegned__alt{
+  padding-bottom: 110%;
+}
+.pg-sdisegned img.pg-image-overlowed__frame{
+  filter: grayscale(0);
+}
+.pg-sdisegned .pg-image-overlowed img:nth-last-child(1) {
+  z-index: $zIndexZero;
+}
+.pg-sdisegned .pg-image-overlowed img:nth-last-child(2) {
+  z-index: $zIndexNormal;
+}
+
+
+// seccion de slider
+
+.imagen-porla {
+  width: 160px; 
+  height: 160px;
+  object-fit: cover;
+  display: inline-block;
+  margin-right: 30px;
+}
+.imagen-porla:nth-last-of-type(2n + 1){
+  filter: grayscale(1);
+}
+.imagen-porla:last-of-type {
+  margin-right: 0;
+}
+
+// grid de redes
+.pg-gridRedes {
+  color: var(--gray);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // grid-gap: 2em;
+}
+
+.pg-gridRedes div {
+  font-size: .9em;
+}
+
+.pg-gridRedes__icon {
+  border-radius: 50%;
+  background-color: var(--gray-soft);
+  color: var(--gray);
+  display: inline-flex;
+  padding: .8em;
+  justify-content: center;
+  align-items: center;
+}
+.pg-gridRedes  span.jam{
+  font-size: 2.4em;
+}
+.pg-gridRedes *[class*="title"]{
+  color: initial;
+}
+
+//footer
+.pg-gridFooter {
+  color: var(--gray);
+  display: grid;
+  grid-gap: 1em;
+}
+.pg-gridFooter p[class*="title"]{
+  color: initial;
+} 
+.pg-gridFooter *[class*="title"]{
+  color: initial;
+}
+.subFooterGrid {
+  display: grid;
+  grid-gap: .8em;
+}
+
+// sectiond e paga
+.pg-pay {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: var(--gray);
+}
+.pg-pay p {
+  margin-right: .4em;
+}
+.pg-pay span {
+  font-size: 1.8em;
+  cursor: pointer;
+}

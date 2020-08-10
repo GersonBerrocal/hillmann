@@ -1,2 +1,20 @@
-@import 'base/font';
-@import 'base/reset';
+//utils
+@import './utils/var';
+
+//import base
+@import './base/font';
+@import './base/reset';
+
+// import components
+@import './components/menu';
+@import './components/cover';
+@import './components/slider';
+@import './components/form';
+@import './components/card';
+//layout
+@import './layout/padding';
+// pages
+@import './pages/home';
+
+// mas
+@import './plus/plus';
