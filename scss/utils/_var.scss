@@ -22,3 +22,16 @@ $space-2:.5rem;
 $space-3:1rem;
 $space-4:1.5rem;
 $space-5:3rem;
+
+// breakpoints
+//en el caso de small-extra representa desde lo minimo
+//hasta su cantidad; los demas significa "desde su cantidad
+//hasta el siguiente breakpoint";
+//utilizo los breakpoints de boostrap
+$bp:(
+  "sm-x":576,
+  "sm":540,
+  "md":768,
+  "lg":992,
+  "lg-x":1200,
+)

@@ -1,0 +1,17 @@
+
+// para los media query;
+@mixin  rwd($e) {
+  @if map-has-key($bp,$e) {
+    $prop:"min-width";
+    @if $e == "sm-x" {
+      $prop:"max-width";
+    }
+    @media screen and ($prop:#{map-get($bp,$e)}px){
+      @content;
+    }
+  } @else {
+    @media screen and (min-width:$e){
+      @content;
+    }
+  }
+}

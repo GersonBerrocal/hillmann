@@ -6,10 +6,12 @@ class Slider {
     this.sliderScroll = slide.querySelector(".slider__scroll");
   }
   buttonActive = () => {
-    this.btnLeft.addEventListener("click", () => {
+    this.btnLeft.addEventListener("click", event => {
+      event.preventDefault();
       this.retrocede(this.datos());
     });
-    this.btnRight.addEventListener("click", () => {
+    this.btnRight.addEventListener("click", event => {
+      event.preventDefault();
       this.avanza(this.datos());
     });
   }

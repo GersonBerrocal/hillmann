@@ -9,4 +9,7 @@ h1,h2,h3,h4,h5 {
 
 html {
   font-size: 14px;
+  @include rwd(lg) {
+    font-size: 16px;
+  }
 }

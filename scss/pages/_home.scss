@@ -5,6 +5,18 @@
   letter-spacing: .2em;
   z-index: $zIndexNext;
   position: relative;
+  @include rwd(md){
+    font-size: 2.4rem;
+  }
+}
+.pg-section-titleOne {
+  font-size: 2rem;
+  letter-spacing: .2em;
+  z-index: $zIndexNext;
+  position: relative;
+  @include rwd(md){
+    font-size: 2.5rem;
+  }
 }
 
 body {
@@ -14,16 +26,42 @@ body {
 header {
   color: var(--white);
 }
-
+.dmas {
+  font-size: 1em;
+}
 .pg-header-one {
   margin-bottom: $space-5 * 6;
 }
-
+.pg-headerTextOne {
+  @include rwd(sm){
+    max-width: 55%;
+  }
+}
+.pg-headerTwo {
+  @include rwd(sm){
+    column-count: 2;
+  }
+}
 // seccion 2 de la pagina
 
 .pg-section-date {
   position: relative;
   padding-bottom: 130%;
+  @include rwd(420px){
+    padding-bottom: 96%;
+  }
+  @include rwd(sm){
+    padding-bottom: 60%;
+  }
+  @include rwd(md){
+    padding-bottom: 45%;
+  }
+  @include rwd(lg){
+    padding-bottom: 50%;
+  }
+  @include rwd(lg-x){
+    padding-bottom: 44%;
+  }
 }
 .pg-section-data__title {
   position: absolute;
@@ -36,13 +74,21 @@ header {
   float: right;
   position: relative;
   top: $space-3 * -1;
+  @include rwd(sm){
+    width: 40%;
+    top: 0;
+  }
 }
 .pg-image-overlowed__frame:nth-last-child(2) {
   position: absolute;
   top:60%;
   left: -56%;
   z-index: $zIndexNormal;
-  filter: grayscale(1) brightness(180%) contrast(80%);
+  filter: grayscale(1) brightness(180%) contrast(80%);  
+  @include rwd(sm){
+    top: $space-3 * -1;
+    left: -90%;
+  }
 }
 p.pg-image-overlowed__frame {
   position: absolute;
@@ -51,19 +97,40 @@ p.pg-image-overlowed__frame {
   z-index: $zIndexNext;
   background-color: var(--white);
   width: 126%;
+  @include rwd(sm){
+    top: 70%;
+    right: 110%;
+  }
 }
 
 // section de designed
+.pg-sdisegned__alt{
+  padding-bottom: 110%;
+  @include rwd(sm){
+    padding-bottom: 80%;
+  }
+  @include rwd(md){
+    padding-bottom: 60%;
+  }
+}
 
 .pg-sdisegned .pg-image-overlowed {
   z-index: $zIndexNormal;
+  @include rwd(sm) {
+    top: 0;
+    position: relative;
+    width: 50%;
+  }
+  @include rwd(md){
+    width: 40%;
+    top: -1rem;
+    right: 10%;
+  }
 }
 .pg-sdisegned h2 span {
   color: var(--gold);
 }
-.pg-sdisegned__alt{
-  padding-bottom: 110%;
-}
+
 .pg-sdisegned img.pg-image-overlowed__frame{
   filter: grayscale(0);
 }
@@ -72,6 +139,20 @@ p.pg-image-overlowed__frame {
 }
 .pg-sdisegned .pg-image-overlowed img:nth-last-child(2) {
   z-index: $zIndexNormal;
+  @include rwd(sm){
+    top:30%;
+    left: -90%;
+  }
+}
+.pg-sdisegned-textTwo {
+  @include rwd(sm){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  & p:nth-child(1){
+    margin-top: 0;
+  }
+  }
 }
 
 
@@ -83,6 +164,9 @@ p.pg-image-overlowed__frame {
   object-fit: cover;
   display: inline-block;
   margin-right: 30px;
+  @include rwd(md){
+    margin-right: 4rem;
+  }
 }
 .imagen-porla:nth-last-of-type(2n + 1){
   filter: grayscale(1);
@@ -97,6 +181,9 @@ p.pg-image-overlowed__frame {
   display: grid;
   grid-template-columns: 1fr 1fr;
   // grid-gap: 2em;
+  @include  rwd(md){
+    grid-template-columns: repeat(4,1fr);
+  }
 }
 
 .pg-gridRedes div {
@@ -124,7 +211,20 @@ p.pg-image-overlowed__frame {
   color: var(--gray);
   display: grid;
   grid-gap: 1em;
+  @include rwd(420px){
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "uno dos" "tres dos";
+    &:nth-child(2) {
+      grid-area: dos;
+    }
+  }
+  @include rwd(md){
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
 }
+
 .pg-gridFooter p[class*="title"]{
   color: initial;
 } 
@@ -134,6 +234,12 @@ p.pg-image-overlowed__frame {
 .subFooterGrid {
   display: grid;
   grid-gap: .8em;
+  @include rwd(md){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @include rwd(lg){
+    grid-template-columns: repeat(3,1fr);
+  }
 }
 
 // sectiond e paga

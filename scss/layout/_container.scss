@@ -1,0 +1,18 @@
+
+.container {
+  @include rwd(sm){
+    max-width: map-get($bp,sm) - 20px;
+    margin-left:auto ;
+    margin-right:auto ;
+  }
+  @include rwd(md){
+    max-width: map-get($bp,md) - 20px;
+  }
+  @include rwd(lg){
+    max-width: map-get($bp,lg) - 20px;
+  }
+  @include rwd(lg-x){
+    // min-width: map-get($bp,lg);
+    max-width: 85%;
+  }
+}

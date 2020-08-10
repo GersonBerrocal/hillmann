@@ -1,6 +1,6 @@
 //utils
 @import './utils/var';
-
+@import './utils/mixin';
 //import base
 @import './base/font';
 @import './base/reset';
@@ -13,6 +13,7 @@
 @import './components/card';
 //layout
 @import './layout/padding';
+@import './layout/container';
 // pages
 @import './pages/home';
 
